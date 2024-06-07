@@ -1,0 +1,27 @@
+from tkinter import *
+import os
+r=Tk()
+r.title("RULES")
+r.geometry("600x450")
+r.configure(bg="black")
+def call_nextscreen():
+    r.destroy()
+    os.system("Level1.py")
+l1=Label(r,text="* Only one player gets to play at a time",font=("Times New Roman",14),height=2,bg="black",fg="#f5ff00")
+l2=Label(r,text="* Once the button is selected it can't be selected again",font=("Times New Roman",14),height=2,bg="black",fg="#00fa9a")
+l3=Label(r,text="* There will be three levels in this game",font=("Times New Roman",14),height=2,bg="black",fg="#f5ff00")
+l4=Label(r,text="* The winner of each level will earn a point",font=("Times New Roman",14),height=2,bg="black",fg="#00fa9a")
+l5=Label(r,text="* The winner of the game will be displayed at the end",font=("Times New Roman",14),height=2,bg="black",fg="#f5ff00")
+l6=Label(r,text="* If its a tie no player wins the point",font=("Times New Roman",14),height=2,bg="black",fg="#00fa9a")
+l7=Label(r,text="R U L E S :",font=("Times New Roman",18),height=2,bg="black",fg="white")
+l1.place(x=0,y=50)
+l2.place(x=0,y=100)
+l3.place(x=0,y=150)
+l4.place(x=0,y=200)
+l5.place(x=0,y=250)
+l6.place(x=0,y=300)
+l7.place(x=0,y=0)
+
+btn_start=Button(r,text="START",command=call_nextscreen,bg="black",fg="white",font=("Times New Roman",18))
+btn_start.place(x=220,y=350)
+r.mainloop()
